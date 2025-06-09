@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 50%, #FFE4E6 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 3px solid #FFB6C1;
+}
+
+.header {
+    background: linear-gradient(135deg, #FFB6C1, #FFC0CB);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.header h1 {
+    color: #8B4B6B;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.header h2 {
+    color: #8B4B6B;
+    font-size: 22px;
+    margin: 5px 0;
+}
+
+.sakura-branch {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 24px;
+}
+
+.flag {
+    position: absolute;
+    right: 100px;
+    top: 20px;
+    font-size: 24px;
+}
+
+.bear {
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    font-size: 30px;
+}
+
+.info-section {
+    padding: 20px;
+    border-bottom: 2px solid #FFB6C1;
+}
+
+.info-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.info-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-item label {
+    background: #FFB6C1;
+    color: #8B4B6B;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    min-width: 60px;
+    text-align: center;
+}
+
+.info-item input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 2px solid #FFB6C1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.info-item input:focus {
+    border-color: #FF69B4;
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.3);
+}
+
+.checklist-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    padding: 20px;
+}
+
+.column {
+    padding: 0 15px;
+    border-right: 2px solid #FFB6C1;
+}
+
+.column:last-child {
+    border-right: none;
+}
+
+.column h3 {
+    background: #FFB6C1;
+    color: #8B4B6B;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+.checkbox-item:hover {
+    background-color: #FFF0F5;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #FF69B4;
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    flex: 1;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer;
+    line-height: 1.3;
+}
+
+.unnecessary-btn {
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.unnecessary-btn:hover {
+    background: #FF4757;
+}
+
+.checkbox-item.unnecessary {
+    background-color: #FFE6E6;
+    opacity: 0.6;
+}
+
+.checkbox-item.unnecessary label {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.checkbox-item.unnecessary .unnecessary-btn {
+    background: #2ECC71;
+}
+
+.checkbox-item.unnecessary .unnecessary-btn:hover {
+    background: #27AE60;
+}
+
+.checkbox-item input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #999;
+    font-weight: bold;
+}
+
+.footer {
+    background: #FFB6C1;
+    padding: 15px;
+    text-align: center;
+}
+
+.footer p {
+    color: #8B4B6B;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .checklist-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .column {
+        border-right: none;
+        border-bottom: 2px solid #FFB6C1;
+        margin-bottom: 20px;
+    }
+    
+    .column:last-child {
+        border-bottom: none;
+    }
+    
+    .info-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .bear, .flag, .sakura-branch {
+        position: static;
+        display: inline-block;
+        margin: 0 5px;
+    }
+} 

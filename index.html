@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일본 여행준비 체크리스트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="sakura-branch">🌸</div>
+            <h1>일본 여행준비</h1>
+            <div class="flag">🇯🇵</div>
+            <h2>✓ 체크리스트 🌸</h2>
+            <div class="bear">🧸</div>
+        </div>
+        
+        <div class="info-section">
+            <div class="info-row">
+                <div class="info-item">
+                    <label>날짜</label>
+                    <input type="text" id="date" placeholder="날짜를 입력하세요">
+                </div>
+                <div class="info-item">
+                    <label>시간</label>
+                    <input type="text" id="time" placeholder="시간을 입력하세요">
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-item">
+                    <label>누구와</label>
+                    <input type="text" id="route" placeholder="노선을 입력하세요">
+                </div>
+                <div class="info-item">
+                    <label>장소</label>
+                    <input type="text" id="place" placeholder="장소를 입력하세요">
+                </div>
+            </div>
+        </div>
+
+        <div class="checklist-section">
+            <div class="column">
+                <h3>미리 준비할 것</h3>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="passport">
+                    <label for="passport">여권</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('passport')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="ticket">
+                    <label for="ticket">항공권</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('ticket')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="entrance">
+                    <label for="entrance">티켓 및 입장권</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('entrance')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="visitjapan">
+                    <label for="visitjapan">visit Japan web</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('visitjapan')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="wifi">
+                    <label for="wifi">유심 or 와이파이</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('wifi')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="exchange">
+                    <label for="exchange">연말 or 환전준비</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('exchange')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="transport">
+                    <label for="transport">교통패스</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('transport')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="card">
+                    <label for="card">해외 결제 카드</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('card')">✗</button>
+                </div>
+            </div>
+
+            <div class="column">
+                <h3>필수 준비물</h3>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="phone">
+                    <label for="phone">볼펜</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('phone')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="notebook">
+                    <label for="notebook">수첩</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('notebook')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="charger">
+                    <label for="charger">충전기</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('charger')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="adapter">
+                    <label for="adapter">변환어댑터</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('adapter')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="battery1">
+                    <label for="battery1">보조배터리</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('battery1')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="multitab">
+                    <label for="multitab">멀티탭</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('multitab')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="map">
+                    <label for="map">지도어플, 번역기</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('map')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="coinwallet">
+                    <label for="coinwallet">동전지갑</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('coinwallet')">✗</button>
+                </div>
+            </div>
+
+            <div class="column">
+                <h3>개인 준비물</h3>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="earphone">
+                    <label for="earphone">이어폰</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('earphone')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="clothes">
+                    <label for="clothes">의류</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('clothes')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="toiletries">
+                    <label for="toiletries">세면도구</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('toiletries')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="mirror">
+                    <label for="mirror">기타 전자기기</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('mirror')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="studentcard">
+                    <label for="studentcard">신분증 및 운전면허증</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('studentcard')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="license">
+                    <label for="license">국제면허증</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('license')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="medicine">
+                    <label for="medicine">상비약</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('medicine')">✗</button>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="insurance">
+                    <label for="insurance">여행자 보험</label>
+                    <button class="unnecessary-btn" onclick="toggleUnnecessary('insurance')">✗</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🌸 체크리스트 🌸</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
